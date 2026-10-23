@@ -14,7 +14,7 @@ li {color:blue;}
 #datos-personales p {
     margin: 3px 0;
 }
-/*si chequea muestra los productos sin cheque desaparecen los productos*/
+/*si chequea muestra los productos sin cheque desaparecen los productosss*/
 input#c1:checked ~ table tbody tr.c1 { display: table-row; }
 input#c1:not(checked) ~ table tbody tr.c1 { display: none; }
 input#c2:checked ~ table tbody tr.c2 { display: table-row; }
