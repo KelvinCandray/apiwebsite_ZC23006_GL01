@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Guía 61b - Ejemplo Web API</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="estilo.css" type="text/css" media="screen">
+    <script src="codigo.js"></script>
+</head>
+
+<body>
+    <h1>Guía L-61b: Programación Front-End API-REST</h1>
+    
+    <!-- Sección de datos personales para la guía -->
+    <div id="datos-personales">
+        <p><strong>Estudiante:</strong> Kelvin Jair Zacarias Candray</p>
+        <p><strong>Carnet:</strong> ZC23006</p>
+        <p><strong>Materia:</strong> Programación para Internet (PPI-115)</p>
+    </div>
+
+    <p><button onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button></p>
+    
+    <div id="listado" style="display:none;">
+        <form name="filtroprods" id="filtroprods">
+            Seleccione Categorías: 
+            <input type="checkbox" id="c1" value="c1" checked>Electrónicos
+            <input type="checkbox" id="c2" value="c2" checked>Joyería
+            <input type="checkbox" id="c3" value="c3" checked>Ropa Caballero
+            <input type="checkbox" id="c4" value="c4" checked>Ropa Dama
+            
+            <ol>
+                <li>Click en la imagen para Acercamiento</li>
+                <li>Click en precio para ordenar Asc o Desc</li>
+            </ol>
+            
+            <table id="tabla" border="1">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>foto</th>
+                        <th id="price" onclick="ordenar()">Precio ⇳</th>
+                        <th>Título</th>
+                        <th>Descripción</th>
+                        <th>Categoría</th>
+                        <!-- Nueva columna requerida: Rating -->
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
